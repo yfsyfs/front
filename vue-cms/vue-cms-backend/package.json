@@ -1,0 +1,16 @@
+{
+  "name": "003vue-cms-server",
+  "version": "1.0.0",
+  "description": "本项目作为 003vue-cms 的服务端存在，仅仅提供数据接口",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  }
+}
