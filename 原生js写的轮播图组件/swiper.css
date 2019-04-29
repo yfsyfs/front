@@ -1,0 +1,44 @@
+/*
+轮播图样式
+ */
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix { /* IE6、7 专有 */
+    *zoom: 1;
+}
+
+#swipercontainer {
+    position: relative;
+}
+
+/*切换图标<a>*/
+.arrow {
+    cursor: pointer;
+    display: none;
+    line-height: 39px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 2;
+    background-color: RGBA(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+/*鼠标移到切换图标上时 背景色突然加深(0.3 变成 0.7)*/
+.arrow:hover {
+    background-color: RGBA(0, 0, 0, 0.7);
+}
+
+/*鼠标移到整个div区域时*/
+#swipercontainer:hover .arrow {
+    display: block; /*显示*/
+}

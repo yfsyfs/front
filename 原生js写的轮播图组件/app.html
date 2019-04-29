@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图测试页</title>
+
+</head>
+<body>
+<!--
+API说明:
+    swiperwidth 是轮播图展示区域的宽度,
+    swiperheight是轮播图需要展示的区域的高度,
+    timecost是每次翻页耗时(单位是ms),
+    pageInterval 是2次翻页之间的时间间隔(单位是ms),
+    isfull 为true表示要使得图片充满整个轮播图展示区域(图片可能被拉伸的变形)
+-->
+<!--swipercontainer 是固定写法 div必须叫这个名字-->
+<div id="swipercontainer" swiperwidth="300" swiperheight="200" timecost="400" pageInterval="1000" isfull="false">
+    <img src="../img/1.jpg"/>
+    <img src="../img/2.jpg"/>
+    <img src="../img/3.jpg"/>
+    <img src="../img/4.jpg"/>
+    <img src="../img/5.jpg"/>
+</div>
+<!--需要使用我的轮播图组件需要引入一份css 一份js-->
+<link rel="stylesheet" href="swiper.css"/>
+<script type="text/javascript" src="swiper.js"></script>
+</body>
+</html>
