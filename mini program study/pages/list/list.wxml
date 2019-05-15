@@ -1,0 +1,29 @@
+<!--pages/list/list.wxml-->
+<!-- 导入模板页html结构(注意, 和 引入样式 @import 不一样) -->
+<import src='/pages/template/list-template.wxml' />
+<view>
+  <!-- swiper组件的API详见文档 -->
+  <swiper catchtap='carousel2detail' duration="200" autoplay="true" interval="1000" circular="true" indicator-dots indicator-color='white' indicator-active-color='yellow'>
+    <swiper-item>
+      <image data-index='1' src='/images/detail/carousel/01.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image data-index='0' src='/images/detail/carousel/02.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image data-index='2' src='/images/detail/carousel/03.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image data-index='3' src='/images/detail/carousel/04.jpg'></image>
+    </swiper-item>
+  </swiper>
+  <!-- 默认数组的当前项的下标变量名默认为 index，数组当前项的变量名默认为 item 这是符合我们大众需求的-->
+  <!-- 这里对模板数据进行遍历, 最好加上 wx:key 提高性能 这是官网上说的 -->
+  <block wx:for='{{listArr}}' wx:key='{{index}}'>
+    <!-- 这里不需要冒泡, 所以使用catch前缀的事件监听 -->
+    <view catchtap='toDetail' data-xxx='{{index}}'>
+      <!-- 三点运算符解构赋值 -->
+      <template is='listTmp' data='{{...item}}'></template>
+    </view>
+  </block>
+</view>

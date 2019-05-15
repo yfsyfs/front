@@ -1,0 +1,13 @@
+<!--pages/index/index.wxml-->
+<!-- view就类比于html中的div, 没有什么太特别的地方 -->
+<view class='indexContainer'>
+  <!-- 在小程序中推荐使用绝对路径  这里使用的就是根路径 -->
+  <image class='avatar' src='{{userInfo.avatarUrl}}'></image>
+  <button bindgetuserinfo='handleGetUserInfo' style='display:{{isShow?"block":"none"}}' open-type='getUserInfo'>获取用户登录信息</button>
+  <!-- 这里和vue很像，使用了插值表达式 {{}} -->
+  <text class='username'>hello {{userInfo.nickName}}</text>
+  <!-- 使用bind作为前缀绑定的事件具备冒泡特性,单击子元素, 控制台将打印子元素被调用和父元素被调用两行, 如果将bind前缀改成catch的话, 单击子元素则只会打印子元素被调用, 即catch前缀绑定事件是没有冒泡的 -->
+  <view bindtap='handleClick' class='goStudy'>
+    <text>开启小程序之旅</text>
+  </view>
+</view>
